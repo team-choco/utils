@@ -2,7 +2,7 @@ import { Fetch } from '../fetch';
 import { Arrays } from '../arrays';
 
 import * as Exports from '../';
-import { Logger } from '../logger';
+import { Logger, isLogType } from '../logger';
 
 describe('Exports', () => {
   it('should export the utilities', () => {
@@ -10,6 +10,7 @@ describe('Exports', () => {
       Fetch: Fetch,
       Arrays: Arrays,
       Logger: Logger,
+      isLogType: isLogType,
     });
   });
 });
