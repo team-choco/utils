@@ -6,7 +6,7 @@ export const ChocoStrings = {
    * @param values - the values to concat.
    * @returns the concatenated string.
    */
-  concat(separator: string, ...values: any[]): string {
+  concat(separator: string, values: any[]): string {
     return values.filter(Boolean).join(separator);
   },
 }

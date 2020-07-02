@@ -7,23 +7,21 @@ describe('Utils(ChocoStrings)', () => {
       const expectedValue = chance.string();
       const otherExpectedValue = chance.string();
 
-      expect(ChocoStrings.concat(
-        ' ',
+      expect(ChocoStrings.concat(' ', [
         expectedValue,
         otherExpectedValue,
-      )).toStrictEqual(`${expectedValue} ${otherExpectedValue}`);
+      ])).toStrictEqual(`${expectedValue} ${otherExpectedValue}`);
     });
 
     it('should remove falsy values', async () => {
       const expectedValue = chance.string();
       const otherExpectedValue = chance.string();
 
-      expect(ChocoStrings.concat(
-        ' ',
+      expect(ChocoStrings.concat(' ', [
         expectedValue,
         null,
         otherExpectedValue,
-      )).toStrictEqual(`${expectedValue} ${otherExpectedValue}`);
+      ])).toStrictEqual(`${expectedValue} ${otherExpectedValue}`);
     });
   });
 });
