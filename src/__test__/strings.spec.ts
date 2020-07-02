@@ -1,13 +1,14 @@
-import { Strings } from '../strings';
+import { ChocoStrings } from '../strings';
 import { chance } from './chance';
 
-describe('Utils(Strings)', () => {
+describe('Utils(ChocoStrings)', () => {
   describe('func(concat)', () => {
     it('should concatenate the values', async () => {
       const expectedValue = chance.string();
       const otherExpectedValue = chance.string();
 
-      expect(Strings.concat(
+      expect(ChocoStrings.concat(
+        ' ',
         expectedValue,
         otherExpectedValue,
       )).toStrictEqual(`${expectedValue} ${otherExpectedValue}`);
@@ -17,7 +18,8 @@ describe('Utils(Strings)', () => {
       const expectedValue = chance.string();
       const otherExpectedValue = chance.string();
 
-      expect(Strings.concat(
+      expect(ChocoStrings.concat(
+        ' ',
         expectedValue,
         null,
         otherExpectedValue,

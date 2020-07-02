@@ -5,4 +5,4 @@ export { Fetch } from './fetch';
 export { Arrays } from './arrays';
 export { Logger, isLogType } from './logger';
 export { ChocoRandom } from './random';
-export { Strings } from './strings';
+export { ChocoStrings } from './strings';
