@@ -1,4 +1,4 @@
-import { Logger, LogType } from '../logger';
+import { Logger } from '../logger';
 import { chance } from './chance';
 
 jest.useFakeTimers();
