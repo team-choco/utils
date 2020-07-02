@@ -19,6 +19,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "@types/node-fetch": "^2.5.7",
+    "chalk": "^4.1.0",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
