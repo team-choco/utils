@@ -1,3 +1,3 @@
 export * from './types';
 
-export { Logger } from './logger';
+export { Logger, isLogType } from './logger';

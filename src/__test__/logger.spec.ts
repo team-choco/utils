@@ -1,7 +1,18 @@
 import { Logger } from '../logger';
 import { chance } from './chance';
+import { isLogType } from '../logger/logger';
 
 jest.useFakeTimers();
+
+describe('func(isLogType)', () => {
+  it('should support detecting LogTypes', () => {
+    expect(isLogType('info')).toStrictEqual(true);
+  });
+
+  it('should support detecting non-LogTypes', () => {
+    expect(isLogType(null)).toStrictEqual(false);
+  });
+});
 
 describe('Class(Logger)', () => {
   describe('func(log)', () => {

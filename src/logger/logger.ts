@@ -1,6 +1,8 @@
 import chalk from 'chalk';
 import { LogMetadataType, LogType } from './types';
 
+const LOG_TYPES: LogType[] = ['trace', 'info', 'warn', 'error'];
+
 const LogMetadata: LogMetadataType = {
   'trace': {
     color: chalk.magenta,
@@ -23,6 +25,10 @@ const LogMetadata: LogMetadataType = {
     level: 0,
   },
 };
+
+export function isLogType(logType?: (null|string)): logType is LogType {
+  return Boolean(logType) && LOG_TYPES.includes(logType as LogType);
+}
 
 export class Logger {
   private level: number;
