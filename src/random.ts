@@ -4,9 +4,9 @@ export const ChocoRandom = {
   },
 
   char(seed?: string): string {
-    const charCode = seed ? seed.charCodeAt(0) : 32;
+    const charCode = seed ? seed.charCodeAt(0) : 97;
 
-    return String.fromCharCode(charCode + ChocoRandom.integer(32 - charCode, 126 - charCode));
+    return String.fromCharCode(charCode + ChocoRandom.integer(97 - charCode, 122 - charCode));
   },
 
   anon(seed: string): string {
